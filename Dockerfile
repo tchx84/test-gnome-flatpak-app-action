@@ -7,8 +7,3 @@ RUN dnf update -y && \
 RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     flatpak -y install flathub org.gnome.Platform//50 && \
     flatpak -y install flathub org.gnome.Sdk//50
-
-COPY entrypoint.sh /entrypoint.sh
-COPY fragment.json /fragment.json
-
-ENTRYPOINT ["/entrypoint.sh"]

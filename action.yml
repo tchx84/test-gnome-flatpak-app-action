@@ -14,4 +14,4 @@ runs:
         MANIFEST: ${{ inputs.manifest }}
       shell: bash
       run: |
-        /entrypoint.sh
+        ${GITHUB_ACTION_PATH}/scripts/test.sh
