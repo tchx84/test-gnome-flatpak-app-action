@@ -9,5 +9,6 @@ RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.
     flatpak -y install flathub org.gnome.Sdk//50
 
 COPY entrypoint.sh /entrypoint.sh
+COPY fragment.json /fragment.json
 
 ENTRYPOINT ["/entrypoint.sh"]
