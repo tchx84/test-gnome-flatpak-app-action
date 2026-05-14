@@ -7,7 +7,11 @@ inputs:
     required: true
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  env:
-    MANIFEST: ${{ inputs.manifest }}
+  using: "composite"
+  steps:
+    - name: Run
+      env:
+        MANIFEST: ${{ inputs.manifest }}
+      shell: bash
+      run: |
+        /entrypoint.sh
