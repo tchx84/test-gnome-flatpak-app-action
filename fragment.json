@@ -1,0 +1,15 @@
+ {
+    "run-tests": true,
+    "build-options": {
+	    "env": {
+                "DISPLAY": "0:0"
+	    },
+	    "test-args": [
+		"--device=dri",
+		"--share=ipc",
+		"--share=network",
+		"--socket=x11",
+		"--socket=session-bus"
+	    ]
+    }
+ }

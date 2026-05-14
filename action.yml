@@ -1,0 +1,13 @@
+name: 'test-gnome-flatpak-app-action'
+description: 'Test GNOME Flatpak apps'
+
+inputs:
+  manifest:
+    description: 'Path to Flatpak manifest'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    MANIFEST: ${{ inputs.manifest }}
